@@ -17,6 +17,8 @@ def sum(a:int, b:int) -> int:
     :param b: 第二个参数
     :return: None
     """
+    global c # 将一个局部变量声明为全局变量
+    c = 10
     print(a + b)
 
 
