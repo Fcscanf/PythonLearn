@@ -1,6 +1,6 @@
 """
 @author:Fcant
-@description：
+@description：函数参数传递学习笔记
 @date: 2019-02-17/0017 下午 13:03
 """
 
@@ -10,7 +10,13 @@
 '''
 
 
-def sum(a, b):
+def sum(a:int, b:int) -> int:
+    """
+    求两个数的和
+    :param a: 第一个参数
+    :param b: 第二个参数
+    :return: None
+    """
     print(a + b)
 
 
