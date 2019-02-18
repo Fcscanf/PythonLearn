@@ -33,11 +33,11 @@ class Person:
 # 类继承时会将属性方法都继承，重写父类的属性和方法将覆盖父类的属性和方法
 class Student(Person):
 
-    def __init__(self):
+    def __init__(self, name):
         """
         super()继承父类的所有属性
         """
-        super().__init__()
+        self._name = name
 
     """
     实例方法：
@@ -71,4 +71,17 @@ class Student(Person):
     @staticmethod
     def use():
         print("Use classRoom")
+
+    """
+    __str__()这个方法会在尝试将对象转换为字符串时调用
+    它的作用可以用来指定对象转换为字符串的结果
+    """
+    def __str__(self):
+        return 'Person.Name is {}'.format(self._name)
+
+
+p = Person('cf')
+print(p)
+s = Student('cd')
+print(s)
 
