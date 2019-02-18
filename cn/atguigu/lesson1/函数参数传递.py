@@ -1,6 +1,6 @@
 """
 @author:Fcant
-@description：函数参数传递学习笔记
+@description：函数参数传递、描述文档、命名空间学习笔记
 @date: 2019-02-17/0017 下午 13:03
 """
 
