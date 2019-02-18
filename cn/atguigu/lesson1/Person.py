@@ -33,6 +33,12 @@ class Person:
 # 类继承时会将属性方法都继承，重写父类的属性和方法将覆盖父类的属性和方法
 class Student(Person):
 
+    def __init__(self):
+        """
+        super()继承父类的所有属性
+        """
+        super().__init__()
+
     """
     实例方法：
         在类中定义的方法，以self为第一个形参的方法都是实例方法
