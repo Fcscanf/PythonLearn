@@ -33,11 +33,12 @@ class Person:
 # 类继承时会将属性方法都继承，重写父类的属性和方法将覆盖父类的属性和方法
 class Student(Person):
 
-    def __init__(self, name):
+    def __init__(self, name, age):
         """
         super()继承父类的所有属性
         """
         self._name = name
+        self._age = age
 
     """
     实例方法：
@@ -78,6 +79,26 @@ class Student(Person):
     """
     def __str__(self):
         return 'Person.Name is {}'.format(self._name)
+
+    """
+    __repr__()这个特殊方法会在对当前对象使用repr()函数时调用
+    它的作用是指定对象在‘交互模式’中直接输出的效果
+    """
+    def __repr__(self):
+        return 'Hello'
+
+    """
+    lt:小于
+    le:小于等于
+    eq:等于
+    ne:不等于
+    gt:大于
+    ge:大于等于
+    __gt__会在对象做大于比较的时候调用，该方法的返回值将会作为比较的结果
+    它需要两个参数，一个self表示当前对象，other表示和当前对象比较的对象
+    """
+    def __gt__(self, other):
+        return self._age > other.age
 
 
 p = Person('cf')
