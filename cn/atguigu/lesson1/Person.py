@@ -7,10 +7,18 @@
 
 class Person:
     """
-
+    类属性：直接在类中定义的属性是类属性
+        类属性可以通过类或类的实例访问到
+        但是类属性只能通过类对象来修改，无法通过实例对象修改
     """
+    count = 0
 
     def __init__(self, name):
+        """
+        实例属性，通过实例对象添加的属性属于实例属性
+            实例属性只能通过实例对象来访问和修改，类对象无法访问修改
+        :param name:
+        """
         self._name = name
 
     @property
@@ -47,4 +55,14 @@ class Student(Person):
     def play(cls):
         print("Play baskboot")
 
+    """
+    静态方法：
+        在类中使用@staticmethod来修饰的方法属于静态方法
+        静态方法不需要指定任何的默认参数，静态方法可以通过类和实例去调用
+        静态方法，基本上是一个和当前类无关的方法，它是一个保存到当前类中的函数
+        静态方法一般都是一些工具方法，和当前类无关
+    """
+    @staticmethod
+    def use():
+        print("Use classRoom")
 
